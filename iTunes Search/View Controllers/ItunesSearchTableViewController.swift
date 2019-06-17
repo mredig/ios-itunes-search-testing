@@ -34,7 +34,7 @@ class ItunesSearchTableViewController: UITableViewController, UISearchBarDelegat
             break
         }
         
-        searchResultController.performSearch(for: searchTerm, resultType: resultType) {
+		searchResultController.performSearch(for: searchTerm, resultType: resultType) {_,_ in 
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }

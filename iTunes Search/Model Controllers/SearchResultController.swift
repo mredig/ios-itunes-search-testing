@@ -8,9 +8,19 @@
 
 import Foundation
 
+enum SearchError: Error, Equatable {
+	case invalidJSON
+}
+
 class SearchResultController {
+
+	var dataLoader: NetworkDataLoader
+
+	init(dataLoader: NetworkDataLoader = URLSession.shared) {
+		self.dataLoader = dataLoader
+	}
     
-    func performSearch(for searchTerm: String, resultType: ResultType, completion: @escaping () -> Void) {
+	func performSearch(for searchTerm: String, resultType: ResultType, completion: @escaping ([SearchResult], Error?) -> Void) {
         
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         let parameters = ["term": searchTerm,
@@ -23,22 +33,25 @@ class SearchResultController {
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.get.rawValue
         
-        let dataTask = URLSession.shared.dataTask(with: request) { (data, _, error) in
-            
-            if let error = error { NSLog("Error fetching data: \(error)") }
-            guard let data = data else { completion(); return }
+		dataLoader.loadData(with: request) { (data, error) in
+
+            if let error = error {
+				NSLog("Error fetching data: \(error)")
+				completion([], error)
+				return
+			}
+            guard let data = data else { completion([], NSError()); return }
             
             do {
                 let jsonDecoder = JSONDecoder()
                 let searchResults = try jsonDecoder.decode(SearchResults.self, from: data)
                 self.searchResults = searchResults.results
+				completion(self.searchResults, nil)
             } catch {
                 print("Unable to decode data into object of type [SearchResult]: \(error)")
+				completion([], SearchError.invalidJSON)
             }
-            
-            completion()
         }
-        dataTask.resume()
     }
     
     let baseURL = URL(string: "https://itunes.apple.com/search")!

@@ -1,0 +1,42 @@
+//
+//  GoodResultsData.swift
+//  iTunes SearchTests
+//
+//  Created by Michael Redig on 6/17/19.
+//  Copyright © 2019 Lambda School. All rights reserved.
+//
+
+import Foundation
+
+let goodResultData = ##"""
+
+
+
+{
+ "resultCount":1,
+ "results": [
+{"isGameCenterEnabled":false,
+"screenshotUrls":["https://is3-ssl.mzstatic.com/image/thumb/Purple113/v4/cc/ec/66/ccec66b4-6eb2-a87d-947c-26f3043a98c4/mzl.nochqlin.png/696x696bb.png", "https://is3-ssl.mzstatic.com/image/thumb/Purple123/v4/1f/0a/12/1f0a1209-5fd4-dbd4-8f31-72b0617b6572/mzl.gsrqzwec.png/696x696bb.png", "https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/6c/f4/d7/6cf4d7d4-a730-576d-4c58-55467b68366f/mzl.brgexyee.png/696x696bb.png"], "ipadScreenshotUrls":[], "appletvScreenshotUrls":[], "artworkUrl60":"https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/4f/e8/df/4fe8df60-3ab2-399f-a8f5-369300c03405/source/60x60bb.jpg", "artworkUrl512":"https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/4f/e8/df/4fe8df60-3ab2-399f-a8f5-369300c03405/source/512x512bb.jpg", "artworkUrl100":"https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/4f/e8/df/4fe8df60-3ab2-399f-a8f5-369300c03405/source/100x100bb.jpg", "artistViewUrl":"https://apps.apple.com/us/developer/michael-redig/id761861103?uo=4",
+"supportedDevices":["iPhone5s-iPhone5s", "iPadAir-iPadAir", "iPadAirCellular-iPadAirCellular", "iPadMiniRetina-iPadMiniRetina", "iPadMiniRetinaCellular-iPadMiniRetinaCellular", "iPhone6-iPhone6", "iPhone6Plus-iPhone6Plus", "iPadAir2-iPadAir2", "iPadAir2Cellular-iPadAir2Cellular", "iPadMini3-iPadMini3", "iPadMini3Cellular-iPadMini3Cellular", "iPodTouchSixthGen-iPodTouchSixthGen", "iPhone6s-iPhone6s", "iPhone6sPlus-iPhone6sPlus", "iPadMini4-iPadMini4", "iPadMini4Cellular-iPadMini4Cellular", "iPadPro-iPadPro", "iPadProCellular-iPadProCellular", "iPadPro97-iPadPro97", "iPadPro97Cellular-iPadPro97Cellular", "iPhoneSE-iPhoneSE", "iPhone7-iPhone7", "iPhone7Plus-iPhone7Plus", "iPad611-iPad611", "iPad612-iPad612", "iPad71-iPad71", "iPad72-iPad72", "iPad73-iPad73", "iPad74-iPad74", "iPhone8-iPhone8", "iPhone8Plus-iPhone8Plus", "iPhoneX-iPhoneX", "iPad75-iPad75", "iPad76-iPad76", "iPhoneXS-iPhoneXS", "iPhoneXSMax-iPhoneXSMax", "iPhoneXR-iPhoneXR", "iPad812-iPad812", "iPad834-iPad834", "iPad856-iPad856", "iPad878-iPad878", "iPadMini5-iPadMini5", "iPadMini5Cellular-iPadMini5Cellular", "iPadAir3-iPadAir3", "iPadAir3Cellular-iPadAir3Cellular", "iPodTouchSeventhGen-iPodTouchSeventhGen"], "advisories":["Infrequent/Mild Medical/Treatment Information"], "kind":"software", "features":[], "trackCensoredName":"Poopmaster", "languageCodesISO2A":["EN"], "fileSizeBytes":"16277504", "contentAdvisoryRating":"12+", "trackViewUrl":"https://apps.apple.com/us/app/poopmaster/id1398083909?uo=4", "trackContentRating":"12+", "sellerName":"Michael Redig", "currentVersionReleaseDate":"2019-04-11T01:39:27Z", "isVppDeviceBasedLicensingEnabled":true, "trackId":1398083909, "trackName":"Poopmaster", "releaseDate":"2018-07-23T16:53:19Z", "primaryGenreName":"Health & Fitness", "primaryGenreId":6013,
+"releaseNotes":"- Statistics are now based on a rolling average accurate to the second\n- Removing entries is now smoother\n- Performance management is no longer necessary as the app dynamically loads more entries as you scroll through the list.\n- After you have been entering data for several years, the app offers to purge entries older than two years to keep the database clean.", "currency":"USD", "wrapperType":"software", "version":"1.2", "formattedPrice":"Free", "artistId":761861103, "artistName":"Michael Redig", "genres":["Health & Fitness", "Lifestyle"], "price":0.00,
+"description":"Poopmaster allows you to track your bowel movements. Simply tell it when you're in the bathroom and optionally log additional meta data to help you track how well you're doing.\n\nThis app is intended primarily for those suffering from ulcerative colitis or Crohn's disease, but others may find it useful as well.\n\nThis app is donationware - full functionality is provided for free! However, if you find it useful, it is highly appreciated if you would use the in app purchase functionality to make a donation to support its development!", "bundleId":"com.redeggproductions.Poopmaster", "genreIds":["6013", "6012"], "minimumOsVersion":"11.3"}]
+}
+
+
+
+"""##.data(using: .utf8)
+
+let badResultData = ##"""
+
+
+
+{
+ "resultCount":1,
+ "results": [
+{"isGameCenterEnabled":false,
+"screenshotUrls":["https://is3-ssl.mzstatic.com/image/thumb/Purple113/v4/cc/ec/66/ccec66b4-6eb2-a87d-947c-26f3043a98c4/mzl.nochqlin.png/696x696bb.png", "https://is3-ssl.mzstatic.com/image/thumb/Purple123/v4/1f/0a/12/1f0a1209-5fd4-dbd4-8f31-72b0617b6572/mzl.gsrqzwec.png/696x696bb.png", "https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/6c/f4/d7/6cf4d7d4-a730-576d-4c58-55467b68366f/mzl.brgexyee.png/696x696bb.png"], "ipadScreenshotUrls":[], "appletvScreenshotUrls":[], "artworkUrl60":"https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/4f/e8/df/4fe8df60-3ab2-399f-a8f5-369300c03405/source/60x60bb.jpg", "artworkUrl512":"https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/4f/e8/df/4fe8df60-3ab2-399f-a8f5-369300c03405/source/512x512bb.jpg", "artworkUrl100":"https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/4f/e8/df/4fe8df60-3ab2-399f-a8f5-369300c03405/source/100x100bb.jpg", "artistViewUrl":"https://apps.apple.com/us/developer/michael-redig/id761861103?uo=4",
+"supportedDevices":["iPhone5s-iPhone5s", "iPadAir-iPadAir", "iPadAirCellular-iPadAirCellular", "iPadMiniRetina-iPadMiniRetina", "iPadMiniRetinaCellular-iPadMiniRetinaCellular", "iPhone6-iPhone6", "iPhone6Plus-iPhone6Plus", "iPadAir2-iPadAir2", "iPadAir2Cellular-iPadAir2Cellular", "iPadMini3-iPadMini3", "iPadMini3Cellular-iPadMini3Cellular", "iPodTouchSixthGen-iPodTouchSixthGen", "iPhone6s-iPhone6s", "iPhone6sPlus-iPhone6sPlus", "iPadMini4-iPadMini4", "iPadMini4Cellular-iPadMini4Cellular", "iPadPro-iPadPro", "iPadProCellular-iPadProCellular", "iPadPro97-iPadPro97", "iPadPro97Cellular-iPadPro97Cellular", "iPhoneSE-iPhoneSE", "iPhone7-iPhone7", "iPhone7Plus-iPhone7Plus", "iPad611-iPad611", "iPad612-iPad612", "iPad71-iPad71", "iPad72-iPad72", "iPad73-iPad73", "iPad74-iPad74", "iPhone8-iPhone8", "iPhone8Plus-iPhone8Plus", "iPhoneX-iPhoneX", "iPad75-iPad75", "iPad76-iPad76", "iPhoneXS-iPhoneXS", "iPhoneXSMax-iPhoneXSMax", "iPhoneXR-iPhoneXR", "iPad812-iPad812", "iPad834-iPad834", "iPad856-iPad856", "iPad878-iPad878", "iPadMini5-iPadMini5", "iPadMini5Cellular-iPadMini5Cellular", "iPadAir3-iPadAir3", "iPadAir3Cellular-iPadAir3Cellular", "iPodTouchSeventhGen-iPodTouchSeventhGen"], "advisories":["Infrequent/Mild Medical/Treatment Information"], "kind":"software", "features":[], "trackCensoredName":"Poopmaster", "languageCodesISO2A":["EN"], "fileSizeBytes":"16277504", "contentAdvisoryRating":"12+", "trackViewUrl":"https://apps.apple.com/us/app/poopmaster/id1398083909?uo=4", "trackContentRating":"12+", "sellerName":"Michael Redig", "currentVersionReleaseDate":"2019-04-11T01:39:27Z", "isVppDeviceBasedLicensingEnabled":true, "trackId":1398083909, "trackName":"Poopmaster", "releaseDate":"2018-07-23T16:53:19Z", "primaryGenreName":"Health & Fitness", "primaryGenreId":6013,
+"releaseNotes":"- Statistics are now based on a rolling average accurate to the second\n- Removing entries is now smoother\n- Performance management is no longer necessary as the app dynamically loads more entries as you scroll through the list.\n- After you have been entering data for several years, the app offers to purge entries older than two years to keep the database clean.", "currency":"USD", "wrapperType":"software", "version":"1.2", "formattedPrice":"Free", "artistId":761861103, "artistName":"Michael Redig", "genres":["Health & Fitness", "Lifestyle"], "price":0.00,
+"description":"Poopmaster allows you to track your bowel movements. Simply tell it when you're in the bathroom and optionally log additional meta data to help you track how well you're doing.\n\nThis app is intended primarily for those suffering from ulcerative colitis or Crohn's disease, but others may find it useful as well.\n\nThis app is donationware - full functionality is provided for free! However, if you find it useful, it is highly appreciated if you would use the in app purchase functionality to make a donation to support its development!", "bundleId":"com.redeggproductions.Poopmaster", "genreIds":["6013", "6012"], "minimumOsVersion":"11.3
+
+"""##.data(using: .utf8)
